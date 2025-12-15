@@ -4,9 +4,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-outfit: "Outfit", sans-serif;
+  --main-bg-color: #d5e1ef;
+  --card-bg-color: #ffffff;
+  --text-color-primary: #1f314f;
+  --text-color-secondary: #68778d;
+  --box-shadow-color: rgba(0, 0, 0, 0.05);
+}
+
 body {
-  font-family: "Outfit", sans-serif;
-  background: #d5e1ef;
+  font-family: var(--font-outfit);
+  background: var(--main-bg-color);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,8 +26,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  padding: 24px;
+  gap: 1.5rem;
+  padding: min(1.5rem);
   width: 100%;
 }
 
@@ -26,15 +35,15 @@ main {
   display: flex;
   width: 100%;
   max-width: 320px;
-  padding: 16px 16px 40px 16px;
+  padding: min(1rem) min(1rem) min(2.5rem) min(1rem);
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 1.5rem;
   border-radius: 20px;
-  background: #fff;
+  background: var(--card-bg-color);
 
   /* card-shadow */
-  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1.5rem 1.5rem 0 var(--box-shadow-color);
 }
 
 .image-container {
@@ -53,14 +62,14 @@ main {
 .text-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .text-container h1 {
-  color: #1f314f;
+  color: var(--text-color-primary);
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit);
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -68,10 +77,10 @@ main {
 }
 
 .text-container p {
-  color: #68778d;
+  color: var(--text-color-secondary);
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -80,14 +89,14 @@ main {
 }
 
 .attribution {
-  color: #1f314f;
+  color: var(--text-color-primary);
   font-size: 11px;
   text-align: center;
-  margin-top: 16px;
+  margin-inline-start: auto;
 }
 
 .attribution a {
-  color: #68778d;
+  color: var(--text-color-secondary);
   text-decoration: none;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit);
 }
